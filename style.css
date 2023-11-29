@@ -1,0 +1,913 @@
+body{
+    margin-left: 80px;
+    margin-right: 80px;
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 1002px) {
+  body{
+    margin-left: 20px ;
+    margin-right: 20px;}
+}
+
+
+
+/*header*/
+.menu-icon{
+    display: none;
+}
+.marchio img{
+    width: 70%;
+    }
+    .marchio{
+       text-align: center;
+    }
+    .navigation{ 
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'poppins';
+        font-size: 10px;
+        border-bottom: 2px solid black;
+        border-top:2px solid black;
+    }
+    .nav{
+        display: flex;
+    }
+    .nav ul{
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 100px;
+    }
+    .nav a{
+        display: flex;
+        font-family: 'poppins';
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .storia{
+    color: #D52941;
+    }
+    .lotte{
+        color: #9A23E2;
+    }
+    .donne{
+        color: #FF6BAC;
+    }
+    .about{
+        color: black;
+    }
+    
+    .marchio{ 
+        display: flex;
+        justify-content: center;
+    }
+
+
+/* Media query per schermi più piccoli */
+@media screen and (max-width: 1002px) {
+    .menu-icon {
+        display: block; /* Mostra l'icona del menu */
+        font-size: 30px; /* Imposta la dimensione dell'icona del menu */
+        cursor: pointer;
+    }
+
+    .nav ul {
+        display: none; /* Nascondi la lista di navigazione */
+        flex-direction: column; /* Rendi i link uno sopra l'altro */
+        position: absolute;
+        top: 60px; /* Regola la distanza dalla parte superiore */
+        left: 0;
+        width: 100%;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+    }
+
+    .nav ul.show {
+        display: flex;
+    }
+
+    .nav a {
+        font-size: 20px; /* Imposta la dimensione del testo nel menu */
+        padding: 15px; /* Aggiungi spaziatura intorno ai link */
+        text-align: center; /* Centra il testo nel link */
+        text-decoration: none;
+        transition: background-color 0.3s; /* Aggiungi un effetto di transizione */
+    }
+    .storia{
+        color: #D52941;
+        }
+        .lotte{
+            color: #9A23E2;
+        }
+        .donne{
+            color: #FF6BAC;
+        }
+        .about{
+            color: black;
+        }
+        
+  
+    .nav a:hover {
+        background-color: #ddd; /* Cambia il colore di sfondo al passaggio del mouse */
+    }
+}
+
+
+
+/*hero*/
+
+.hero{
+    margin: 0 10px;
+    display: flex;
+    height: 100vh;
+}
+.img{
+    flex: 1;
+}
+.img img{
+    width: 100%;
+    height: auto;
+    max-height: 100%; 
+    object-fit:scale-down;
+}
+
+.intro{
+    flex: 1;
+    padding: 20px;
+    margin-top: 50px;
+}
+.intro h1{
+    color: #000;
+    font-family: Bakso Sapi;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.intro p{
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@media (max-width: 1002px) {
+    .hero {
+        margin: 0 10px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .intro {
+        flex: 1;
+        padding: 5px;
+        margin-top: 20px;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+}
+
+
+
+/*contenuto home*/
+.argomento1{
+    font-family:'Bakso Sapi';
+    font-size: 30px;
+    border-bottom: 4px solid black;
+ }
+
+.conainer-card{
+    display: flex;
+    justify-content: center;
+}
+.card {
+    margin-top: 50px;
+    align-items: center;
+    background-color: #D52941;
+    display: flex;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    overflow: hidden;
+    width: 100%; /* Puoi regolare la larghezza della card secondo le tue preferenze */
+}
+.card img {
+    padding: 60px;
+    width: 30%;
+    object-fit: cover;
+}
+.card-content {
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 30px;
+    font-family: 'poppins';
+    color: #ffffff;
+}
+.arrow-button {
+    display: inline-block;
+    padding: 10px 70px;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+  
+.arrow-button:hover {
+    background-color: #FF6BAC; /* Cambia colore al passaggio del mouse */
+}
+  
+.arrow-button span {
+    margin-left: 5px;
+}
+
+
+    @media (max-width: 1002px) {
+        .card {
+            flex-direction: column; /* Cambia la direzione a colonna per schermi più piccoli */
+            align-items: center;
+        }
+    
+        .card img {
+            padding-bottom: 0px;
+            width: 100%; /* Larghezza completa dell'immagine */
+            order: -1; /* Sposta l'immagine sopra il contenuto testuale */
+        }
+    
+        .card-content {
+            margin-left: 40px;
+            font-size: 26px; 
+            padding-bottom: 50px;
+        }
+    
+        .arrow-button {
+            margin-top: 20px; /* Aggiungi margine superiore per spaziare l'arrow-button dal testo */
+        }
+    }
+
+
+.argomento2{
+    margin-top: 80px;
+    font-family:'Bakso Sapi';
+    font-size: 30px;
+    border-bottom: 4px solid black;
+ }
+
+#carousel-container {
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.card1 {
+    flex: 0 0 calc(100% / 3); /* Calcola la larghezza dinamica per visualizzare 3 card senza margini */
+    background-color: #fff;
+    padding: 20px; /* Ridotto il padding della card */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid black;
+}
+
+.card1 img {
+    border: 3px solid black;
+    width: 100%; /* Fai occupare all'immagine l'intera larghezza della card */
+    height: auto;
+}
+.card1 h2{
+    font-family: 'Bakso Sapi';
+    color: black;
+}
+.card1 p{
+    font-family: 'poppins';
+}
+#carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #969696;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #333;
+}
+
+
+@media (max-width: 1002px) {
+ #carousel {
+ display:flex ;
+flex-wrap: wrap;
+}
+        
+.card1 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+}
+        
+ #carousel-indicators {
+     display: none;
+}
+    
+/* Resto del CSS rimane invariato */
+.argomento2 {
+    margin-top: 80px;
+    font-family: 'Bakso Sapi';
+    font-size: 30px;
+    border-bottom: 4px solid black;
+}
+
+#carousel-container {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.card1 img {
+    border: 3px solid black;
+    width: 100%;
+    height: auto;
+}
+
+.card1 h2 {
+    font-family: 'Bakso Sapi';
+}
+
+.card1 p {
+    font-family: 'poppins';
+}
+
+}
+.argomento3{
+    font-family:'Bakso Sapi';
+    font-size: 30px;
+    border-bottom: 4px solid black; 
+}
+.argomentod{
+    width: 60%;
+}
+.argomentod .primo{
+    line-height: 1.3em;
+    margin-bottom: 0;
+    font-family: 'poppins';
+    font-size: 57px;
+    font-weight: bold;
+    color: #FF6BAC;
+}
+.argomentod .secondo{
+    background-color: #FF6BAC;
+    text-align: center;
+    width: 25%;
+    border: 3px solid black;
+    border-radius: 30px;
+    margin: 0;
+    font-family: 'poppins';
+    font-size: 23px;
+    color: black;  
+}
+.argomentod .terzo{
+    font-family: 'poppins';
+    font-size:17px;
+    color: black;   
+}
+@media (max-width: 768px) {
+    .argomentod{
+        width: 100%;
+    }
+    .argomentod .primo{
+        line-height: 1.3em;
+        margin-bottom: 0;
+        font-family: 'poppins';
+        font-size: 33px;
+        font-weight: bold;
+        color: #FF6BAC;
+    }
+    .argomentod .secondo{
+        background-color: #FF6BAC;
+        text-align: center;
+        width: 30%;
+        border: 3px solid black;
+        border-radius: 30px;
+        margin: 0;
+        font-family: 'poppins';
+        font-size: 15px;
+        color: black;  
+    }
+    .argomentod .terzo{
+        font-family: 'poppins';
+        font-size:12px;
+        color: black;   
+    }
+}
+.citazione{
+    margin-top: 100px;
+    background-color: #9A23E2;
+    font-family: 'poppins';
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 32px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1002px) {
+    .citazione {
+        margin-top: 50px;
+        font-size: 30px;
+        padding: 40px;
+    }
+
+}
+
+ /*footer */
+.footer{
+margin-top: 80px;
+border-bottom: 2px solid black;
+border-top:2px solid black;
+display: flex;
+align-items: center;
+gap: 100px;
+}
+.newsletter-container{
+display: column;
+}
+.newsletter{
+    width: 30%;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 30px;
+
+}
+.newsletter h2{
+    display: flex;
+    justify-content: center;
+}
+input{
+    border-radius: 30px;
+    padding:5px 15px;
+    background-color: #FF6BAC;
+    border: 3px solid black;
+}
+.newsletter-container h2{
+    margin: 0;
+    font-family: 'poppins';
+    font-size: 20px;
+}
+.contatti{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.contatti li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+
+}
+.contatti li p{
+    font-family: 'poppins';
+    color: black;
+}
+.navfooter{
+    display:flex;
+    margin-left: 270px;
+    
+}
+.navfooter li{
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+    font-family: 'poppins';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+@media (max-width: 1002px) {
+  .footer{
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+  .newsletter-container{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter-container a img{
+
+    width: 320px;
+  }
+  .newsletter h2{
+    display: flex;
+    justify-content: center;
+  }
+  .contatti{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+.navfooter{
+    margin-top: 0px;
+  
+    display:flex;
+    margin-right: 280px;
+}
+.navfooter li{
+    margin-right: 50px;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+    font-family: 'poppins';
+    font-weight: bold;
+    font-size: 20px;
+}
+.newsletter h2{
+   font-size: 18px;
+}
+}
+
+
+ /* STORIA [hero] */
+ .containerstoria{
+    height: 65vh;
+    border: 1px solid red;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+ }
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#D52941;
+    font-family: 'poppins';
+    font-size: 100px;
+    font-weight: bold;
+  }
+
+.containerstoria img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color:0 ;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Cambia il colore e l'opacità come desideri */
+}
+.microargomenti ul{
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    align-items:center ;
+    gap: 150px;
+    list-style: none;
+    font-family: 'poppins';
+    color: #000;
+    padding-bottom: 20px;
+    padding-top: 0;
+    border-bottom: 2px solid black;
+}
+.microargomenti li :hover{
+    color:#D52941;  
+}
+.titolo_s{
+    margin-top: 40px;
+    font-family: 'poppins';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 4px solid black;
+}
+.titolo_s h6{
+    margin: 0;
+    font-size: 19.2px;
+    font-style: normal;
+}
+.titolo_s h2{
+    margin: 0px;
+    font-size: 96px;
+}
+.cardstoria {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+.card_s {
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 10px;
+}
+    
+.card_s img {
+    max-width: 100%;
+    height: auto;
+}
+    
+.card_s h5 {
+    font-size: 20px;
+    font-family: 'Bakso Sapi';
+    margin: 10px 0;
+}
+    
+.card_s p {
+    font-family: 'poppins';
+     margin: 0;
+}
+
+
+@media (max-width: 768px) {
+.microargomenti ul{
+    gap: 30px;
+    font-size: 14px;
+}
+.titolo_s h2{
+    font-size: 57px;
+}
+.titolo_s h6{
+    font-size: 14px;
+}
+.cardstoria {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column; /* Cambia la direzione del layout a colonna */
+    gap: 30px;
+}
+
+.card_s {
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 10px;
+    max-width: 100%; /* Occupa l'intero spazio disponibile */
+}
+
+.card_s img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card_s h5 {
+    font-size: 20px;
+    font-family: 'Bakso Sapi';
+    margin: 10px 0;
+}
+
+.card_s p {
+    font-family: 'poppins';
+    margin: 0;
+}
+}
+
+/* EMANCIPAZIONE */
+.container_e{
+    margin-top: 20px;
+    background-color: #DDE5B6;
+    height: 65vh;
+    position: relative;
+    text-align: center;
+}
+.container_e img{
+    width: 70%;
+    height:70%;
+    object-fit:contain; /* per adattare l'immagine senza distorsioni */
+
+}
+.container_e h1{
+    margin: 0;
+    font-size: 60px;
+    font-family: 'poppins';
+}
+.paragrafo_e {
+    font-family: 'poppins';
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.testo_e {
+    justify-content: center;
+}
+
+.testo_e h2 {
+    color: #000;
+    font-family: Bakso Sapi;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.testo_e h3 {
+    color: #A4C407;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.testoverde {
+    color:#A4C407;
+}
+@media (max-width: 768px) {
+    .paragrafo_e {
+        font-family: 'poppins';
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+    .testo_e h2 {
+        font-size: 18;
+    }
+    .testo_e h3{
+        font-size: 20px;
+    }
+}
+/* ISCRIVITI */
+.iscrizione{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.testo_i{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.testo_i h2{
+    width: 60%;
+    margin-bottom: 0;
+    font-family: 'bakso sapi';
+    font-size: 60px;   
+}
+.testo_i h6{
+    width: 60%;
+    display: flex;
+    margin-top:10px;
+    margin-bottom: 0px;
+    font-family: 'poppins';
+    font-size: 30px;
+    font-weight: 350;  
+    padding-bottom: 10px; 
+    border-bottom: 4px solid black;
+}
+.campo{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    width: 60%;
+    display: flex;
+    font-family: 'poppins';
+    font-size: 25px;
+}
+.nickname{
+margin-bottom: 20px;
+}
+.nickname input{
+    background-color: #ffffff;
+    font-family: 'poppins';
+}
+
+.mail input{
+    background-color:#ffffff;
+    font-family: 'poppins';
+}
+.campo h2{
+    background-color: #000000;
+    margin-top: 40px;
+    font-family: 'poppins';
+    border: 2px solid black;
+    color: #FF6BAC;
+    border-radius: 30px;
+    font-size: 20px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+/* NEWSLETTER */
+.popup{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.testo_n{
+    margin-top: 50px;
+    border: 4px solid black;
+    border-radius: 20px;
+    width: 40%;
+    padding: 20PX;
+    background-color: #FF6BAC;
+    display: flex;
+    flex-direction: column;
+}
+.testo_n h2{
+    font-family: 'bakso sapi';
+    font-size: 60px;
+}
+.testo_n h5{
+    margin:0;
+    font-family: 'poppins';
+    font-size: 30px;
+   font-weight: 350;
+}
+.testo_n p{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 30px;
+    width: 30%;
+    font-family: 'poppins';
+    padding: 5px;
+    color: #FF6BAC;
+}
+@media (max-width: 768px) {
+.testo_n{
+    margin-top: 0px;
+    width: 100%;
+}
+.testo_n h2{
+    font-family: 'bakso sapi';
+    font-size: 30px;
+}
+.testo_n h5{
+    margin:0;
+    font-family: 'poppins';
+    font-size: 25px;
+    font-weight: 350;
+}
+.testo_n p{
+    width: 35%;
+    font-size: 15px;
+}
+}
